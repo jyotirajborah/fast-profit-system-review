@@ -140,6 +140,142 @@
             transform: translateY(0);
         }
 
+        .cta-button .arrow {
+            display: inline-block;
+            margin-left: 0.5rem;
+            transition: transform 0.2s ease;
+        }
+
+        .cta-button:hover .arrow {
+            transform: translateX(4px);
+        }
+
+        .cta-button-large {
+            padding: 1.125rem 2.5rem;
+            font-size: 1.125rem;
+        }
+
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            color: var(--primary-color);
+            padding: 0.625rem 1.25rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-lg);
+            border: 1px solid #93c5fd;
+        }
+
+        .badge-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.25rem;
+            height: 1.25rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.75rem;
+        }
+
+        .disclaimer {
+            margin-top: var(--spacing-md);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .info-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.875rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.9375rem;
+        }
+
+        .info-value {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            text-align: right;
+        }
+
+        .author-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: var(--spacing-md);
+            border-radius: 0.75rem;
+            margin-bottom: var(--spacing-lg);
+            border: 1px solid #fcd34d;
+        }
+
+        .author-badge {
+            font-weight: 600;
+            color: #92400e;
+            font-size: 0.9375rem;
+        }
+
+        .rating-display {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 1.25rem;
+            letter-spacing: 0.125rem;
+        }
+
+        .rating-text {
+            font-size: 0.875rem;
+            color: #92400e;
+            font-weight: 600;
+        }
+
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .trust-icon {
+            font-size: 1.25rem;
+        }
+
         .pros-cons {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -302,6 +438,26 @@
             .cta-section {
                 padding: var(--spacing-xl) var(--spacing-lg);
             }
+
+            .author-box {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+                text-align: center;
+            }
+
+            .info-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+
+            .info-value {
+                text-align: left;
+            }
+
+            .trust-indicators {
+                gap: var(--spacing-md);
+            }
         }
 
         @media (max-width: 480px) {
@@ -331,14 +487,40 @@
 <main>
     <div class="container">
         <section>
+            <div class="trust-badge">
+                <span class="badge-icon">✓</span>
+                <span>Honest Review • No Hype • Real Analysis</span>
+            </div>
             <h2>What is the Fast Profit System?</h2>
             <p class="hero-text">The Fast Profit System is an online course designed to teach people how to generate income through affiliate marketing and digital product sales. It promises quick results and multiple income streams for beginners.</p>
             <p class="hero-text">This review breaks down exactly what you get, what works, what doesn't, and whether it's worth your time and money.</p>
-            <a href="https://warriorplus.com/o2/a/m2ds25d/0" class="cta-button" rel="noopener noreferrer">Check It Out</a>
+            <a href="https://warriorplus.com/o2/a/m2ds25d/0" class="cta-button" rel="noopener noreferrer">
+                Visit Official Site
+                <span class="arrow">→</span>
+            </a>
+            <p class="disclaimer">Affiliate link • We earn a commission if you purchase</p>
         </section>
 
         <section>
             <h2>Overview</h2>
+            <div class="info-card">
+                <div class="info-row">
+                    <span class="info-label">Course Type</span>
+                    <span class="info-value">Online Training Program</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Focus Area</span>
+                    <span class="info-value">Affiliate Marketing & Digital Products</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Skill Level</span>
+                    <span class="info-value">Beginner to Intermediate</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Time Commitment</span>
+                    <span class="info-value">10+ hours/week recommended</span>
+                </div>
+            </div>
             <p>The Fast Profit System positions itself as a beginner-friendly course that teaches multiple ways to make money online. The course includes video training, templates, and access to a community. It's marketed as a quick-start solution for people looking to generate income without prior experience.</p>
             <p>The system focuses on affiliate marketing, email list building, and promoting digital products. It claims members can start earning within days and scale to significant monthly income.</p>
         </section>
@@ -376,19 +558,43 @@
 
         <section>
             <h2>My Take</h2>
+            <div class="author-box">
+                <div class="author-badge">Reviewer's Opinion</div>
+                <div class="rating-display">
+                    <span class="stars">★★★☆☆</span>
+                    <span class="rating-text">3.5 out of 5</span>
+                </div>
+            </div>
             <div class="take-box">
-                <p>The Fast Profit System is a legitimate course with solid foundational content. If you're a complete beginner with no online business experience, it provides a structured path forward. The templates and community are genuinely useful.</p>
-                <p>However, the marketing is misleading. The earnings claims are inflated, and most people won't see significant results in the first month. The system works, but it requires real work, consistency, and patience—something the sales page doesn't emphasize enough.</p>
-                <p>My honest recommendation: If you're willing to put in 10+ hours per week for at least 3 months, and you're serious about building an online business, it's worth considering. If you're looking for quick money with minimal effort, save your money. The information is valuable, but it's not a shortcut to wealth.</p>
-                <p>The real value isn't in the course itself—it's in your commitment to implementing what you learn. Many people buy courses and never finish them. Be honest with yourself about whether you'll actually do the work.</p>
+                <p><strong>The Good:</strong> The Fast Profit System is a legitimate course with solid foundational content. If you're a complete beginner with no online business experience, it provides a structured path forward. The templates and community are genuinely useful.</p>
+                <p><strong>The Reality:</strong> However, the marketing is misleading. The earnings claims are inflated, and most people won't see significant results in the first month. The system works, but it requires real work, consistency, and patience—something the sales page doesn't emphasize enough.</p>
+                <p><strong>My Recommendation:</strong> If you're willing to put in 10+ hours per week for at least 3 months, and you're serious about building an online business, it's worth considering. If you're looking for quick money with minimal effort, save your money. The information is valuable, but it's not a shortcut to wealth.</p>
+                <p><strong>Bottom Line:</strong> The real value isn't in the course itself—it's in your commitment to implementing what you learn. Many people buy courses and never finish them. Be honest with yourself about whether you'll actually do the work.</p>
             </div>
         </section>
 
         <section>
             <div class="cta-section">
                 <h2>Ready to Learn More?</h2>
-                <p>If this review resonates with you and you want to explore the Fast Profit System further, click the button below.</p>
-                <a href="https://warriorplus.com/o2/a/m2ds25d/0" class="cta-button" rel="noopener noreferrer">Get Access Now</a>
+                <p>If this review resonates with you and you want to explore the Fast Profit System further, visit the official site below.</p>
+                <a href="https://warriorplus.com/o2/a/m2ds25d/0" class="cta-button cta-button-large" rel="noopener noreferrer">
+                    Visit Official Site
+                    <span class="arrow">→</span>
+                </a>
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <span class="trust-icon">🔒</span>
+                        <span>Secure Checkout</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">↩️</span>
+                        <span>30-Day Guarantee</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">✓</span>
+                        <span>Instant Access</span>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
