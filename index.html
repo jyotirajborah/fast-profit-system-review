@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Honest review of the Fast Profit System. Learn the pros, cons, and my take on whether this online course is worth your time and money.">
     <title>Fast Profit System - Honest Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -21,6 +24,24 @@
     }
     </script>
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #f97316;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --bg-light: #f9fafb;
+            --success-color: #10b981;
+            --error-color: #ef4444;
+            --max-width: 1120px;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4rem;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -28,115 +49,132 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: #333;
-            background: #fff;
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text-primary);
+            background: #ffffff;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
-            max-width: 900px;
+            max-width: var(--max-width);
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 var(--spacing-lg);
         }
 
         header {
-            padding: 60px 0 40px;
+            padding: var(--spacing-2xl) 0 var(--spacing-xl);
             text-align: center;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
         }
 
         h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: var(--spacing-xs);
             font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
         }
 
         .tagline {
-            font-size: 18px;
-            color: #666;
-            font-weight: 300;
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            color: var(--text-secondary);
+            font-weight: 400;
         }
 
         section {
-            padding: 50px 0;
-            border-bottom: 1px solid #eee;
+            padding: var(--spacing-2xl) 0;
         }
 
-        section:last-child {
-            border-bottom: none;
+        section:not(:last-child) {
+            border-bottom: 1px solid var(--border-color);
         }
 
         h2 {
-            font-size: 32px;
-            margin-bottom: 30px;
-            font-weight: 600;
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            margin-bottom: var(--spacing-lg);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
         }
 
         p {
-            font-size: 16px;
+            font-size: 1.0625rem;
             line-height: 1.8;
-            margin-bottom: 15px;
-            color: #555;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-secondary);
         }
 
         .hero-text {
-            font-size: 17px;
-            line-height: 1.9;
-            color: #666;
-            margin-bottom: 25px;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+            max-width: 800px;
         }
 
         .cta-button {
             display: inline-block;
-            background: #ff6b35;
+            background: var(--secondary-color);
             color: white;
-            padding: 14px 32px;
-            border-radius: 4px;
+            padding: 0.875rem 2rem;
+            border-radius: 0.5rem;
             text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
-            transition: background 0.3s;
+            font-size: 1rem;
+            transition: all 0.2s ease;
             border: none;
             cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .cta-button:hover {
-            background: #ff5722;
+            background: #ea580c;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
         }
 
         .pros-cons {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
         }
 
         .pros, .cons {
-            padding: 30px;
-            border-radius: 4px;
+            padding: var(--spacing-lg);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
         }
 
         .pros {
-            background: #f0fdf4;
-            border-left: 4px solid #22c55e;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 4px solid var(--success-color);
         }
 
         .cons {
-            background: #fef2f2;
-            border-left: 4px solid #ef4444;
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            border-left: 4px solid var(--error-color);
         }
 
         .pros h3 {
-            color: #16a34a;
-            font-size: 20px;
-            margin-bottom: 20px;
+            color: #15803d;
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-md);
+            font-weight: 600;
         }
 
         .cons h3 {
-            color: #dc2626;
-            font-size: 20px;
-            margin-bottom: 20px;
+            color: #b91c1c;
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-md);
+            font-weight: 600;
         }
 
         .pros ul, .cons ul {
@@ -144,39 +182,44 @@
         }
 
         .pros li, .cons li {
-            padding: 10px 0;
-            padding-left: 25px;
+            padding: 0.625rem 0;
+            padding-left: 1.75rem;
             position: relative;
-            font-size: 15px;
-            color: #555;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
 
         .pros li:before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #22c55e;
-            font-weight: bold;
+            color: var(--success-color);
+            font-weight: 700;
+            font-size: 1.125rem;
         }
 
         .cons li:before {
             content: "✗";
             position: absolute;
             left: 0;
-            color: #ef4444;
-            font-weight: bold;
+            color: var(--error-color);
+            font-weight: 700;
+            font-size: 1.125rem;
         }
 
         .take-box {
-            background: #f9fafb;
-            padding: 30px;
-            border-radius: 4px;
-            border-left: 4px solid #3b82f6;
-            margin-top: 30px;
+            background: var(--bg-light);
+            padding: var(--spacing-xl);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--primary-color);
+            margin-top: var(--spacing-lg);
         }
 
         .take-box p {
-            margin-bottom: 15px;
+            margin-bottom: var(--spacing-md);
+            font-size: 1.0625rem;
         }
 
         .take-box p:last-child {
@@ -184,49 +227,94 @@
         }
 
         .cta-section {
-            background: #f9fafb;
-            padding: 50px 30px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: var(--spacing-2xl);
             text-align: center;
-            border-radius: 4px;
-            margin-top: 50px;
+            border-radius: 0.75rem;
+            border: 1px solid #bfdbfe;
+            margin-top: var(--spacing-xl);
         }
 
         .cta-section h2 {
-            margin-bottom: 20px;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
         }
 
         .cta-section p {
-            font-size: 17px;
-            margin-bottom: 30px;
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
         }
 
         footer {
-            padding: 40px 0;
+            padding: var(--spacing-xl) 0;
             text-align: center;
-            color: #999;
-            font-size: 13px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            background: var(--bg-light);
+            border-top: 1px solid var(--border-color);
         }
 
         footer p {
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
         }
 
+        footer p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Accessibility improvements */
+        .cta-button:focus-visible {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive design */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 32px;
+            :root {
+                --spacing-xl: 2rem;
+                --spacing-2xl: 2.5rem;
             }
 
-            h2 {
-                font-size: 24px;
+            .container {
+                padding: 0 var(--spacing-md);
             }
 
             .pros-cons {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: var(--spacing-md);
             }
 
             section {
-                padding: 30px 0;
+                padding: var(--spacing-xl) 0;
+            }
+
+            .take-box {
+                padding: var(--spacing-lg);
+            }
+
+            .cta-section {
+                padding: var(--spacing-xl) var(--spacing-lg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cta-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .cta-button, .cta-section {
+                display: none;
             }
         }
     </style>
@@ -240,69 +328,71 @@
     </div>
 </header>
 
-<div class="container">
-    <section>
-        <h2>What is the Fast Profit System?</h2>
-        <p class="hero-text">The Fast Profit System is an online course designed to teach people how to generate income through affiliate marketing and digital product sales. It promises quick results and multiple income streams for beginners.</p>
-        <p class="hero-text">This review breaks down exactly what you get, what works, what doesn't, and whether it's worth your time and money.</p>
-        <a href="https://warriorplus.com/o2/a/m2ds25d/0" class="cta-button">Check It Out</a>
-    </section>
+<main>
+    <div class="container">
+        <section>
+            <h2>What is the Fast Profit System?</h2>
+            <p class="hero-text">The Fast Profit System is an online course designed to teach people how to generate income through affiliate marketing and digital product sales. It promises quick results and multiple income streams for beginners.</p>
+            <p class="hero-text">This review breaks down exactly what you get, what works, what doesn't, and whether it's worth your time and money.</p>
+            <a href="https://warriorplus.com/o2/a/m2ds25d/0" class="cta-button" rel="noopener noreferrer">Check It Out</a>
+        </section>
 
-    <section>
-        <h2>Overview</h2>
-        <p>The Fast Profit System positions itself as a beginner-friendly course that teaches multiple ways to make money online. The course includes video training, templates, and access to a community. It's marketed as a quick-start solution for people looking to generate income without prior experience.</p>
-        <p>The system focuses on affiliate marketing, email list building, and promoting digital products. It claims members can start earning within days and scale to significant monthly income.</p>
-    </section>
+        <section>
+            <h2>Overview</h2>
+            <p>The Fast Profit System positions itself as a beginner-friendly course that teaches multiple ways to make money online. The course includes video training, templates, and access to a community. It's marketed as a quick-start solution for people looking to generate income without prior experience.</p>
+            <p>The system focuses on affiliate marketing, email list building, and promoting digital products. It claims members can start earning within days and scale to significant monthly income.</p>
+        </section>
 
-    <section>
-        <h2>Pros & Cons</h2>
-        <div class="pros-cons">
-            <div class="pros">
-                <h3>Pros</h3>
-                <ul>
-                    <li>Beginner-friendly approach with step-by-step training</li>
-                    <li>Multiple income stream methods included</li>
-                    <li>Pre-built templates and swipe files save time</li>
-                    <li>Active community for support and networking</li>
-                    <li>Lifetime access to course materials</li>
-                    <li>Money-back guarantee reduces risk</li>
-                    <li>Covers both free and paid traffic methods</li>
-                </ul>
+        <section>
+            <h2>Pros & Cons</h2>
+            <div class="pros-cons">
+                <div class="pros">
+                    <h3>Pros</h3>
+                    <ul>
+                        <li>Beginner-friendly approach with step-by-step training</li>
+                        <li>Multiple income stream methods included</li>
+                        <li>Pre-built templates and swipe files save time</li>
+                        <li>Active community for support and networking</li>
+                        <li>Lifetime access to course materials</li>
+                        <li>Money-back guarantee reduces risk</li>
+                        <li>Covers both free and paid traffic methods</li>
+                    </ul>
+                </div>
+
+                <div class="cons">
+                    <h3>Cons</h3>
+                    <ul>
+                        <li>Overhyped earnings claims in marketing</li>
+                        <li>Results heavily depend on execution and effort</li>
+                        <li>Requires consistent work for 3-6 months minimum</li>
+                        <li>Some strategies require paid advertising budget</li>
+                        <li>Information available for free elsewhere online</li>
+                        <li>Success rate is lower than marketing suggests</li>
+                        <li>Upsells and additional products after purchase</li>
+                    </ul>
+                </div>
             </div>
+        </section>
 
-            <div class="cons">
-                <h3>Cons</h3>
-                <ul>
-                    <li>Overhyped earnings claims in marketing</li>
-                    <li>Results heavily depend on execution and effort</li>
-                    <li>Requires consistent work for 3-6 months minimum</li>
-                    <li>Some strategies require paid advertising budget</li>
-                    <li>Information available for free elsewhere online</li>
-                    <li>Success rate is lower than marketing suggests</li>
-                    <li>Upsells and additional products after purchase</li>
-                </ul>
+        <section>
+            <h2>My Take</h2>
+            <div class="take-box">
+                <p>The Fast Profit System is a legitimate course with solid foundational content. If you're a complete beginner with no online business experience, it provides a structured path forward. The templates and community are genuinely useful.</p>
+                <p>However, the marketing is misleading. The earnings claims are inflated, and most people won't see significant results in the first month. The system works, but it requires real work, consistency, and patience—something the sales page doesn't emphasize enough.</p>
+                <p>My honest recommendation: If you're willing to put in 10+ hours per week for at least 3 months, and you're serious about building an online business, it's worth considering. If you're looking for quick money with minimal effort, save your money. The information is valuable, but it's not a shortcut to wealth.</p>
+                <p>The real value isn't in the course itself—it's in your commitment to implementing what you learn. Many people buy courses and never finish them. Be honest with yourself about whether you'll actually do the work.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>My Take</h2>
-        <div class="take-box">
-            <p>The Fast Profit System is a legitimate course with solid foundational content. If you're a complete beginner with no online business experience, it provides a structured path forward. The templates and community are genuinely useful.</p>
-            <p>However, the marketing is misleading. The earnings claims are inflated, and most people won't see significant results in the first month. The system works, but it requires real work, consistency, and patience—something the sales page doesn't emphasize enough.</p>
-            <p>My honest recommendation: If you're willing to put in 10+ hours per week for at least 3 months, and you're serious about building an online business, it's worth considering. If you're looking for quick money with minimal effort, save your money. The information is valuable, but it's not a shortcut to wealth.</p>
-            <p>The real value isn't in the course itself—it's in your commitment to implementing what you learn. Many people buy courses and never finish them. Be honest with yourself about whether you'll actually do the work.</p>
-        </div>
-    </section>
-
-    <section>
-        <div class="cta-section">
-            <h2>Ready to Learn More?</h2>
-            <p>If this review resonates with you and you want to explore the Fast Profit System further, click the button below.</p>
-            <a href="https://warriorplus.com/o2/a/m2ds25d/0" class="cta-button">Get Access Now</a>
-        </div>
-    </section>
-</div>
+        <section>
+            <div class="cta-section">
+                <h2>Ready to Learn More?</h2>
+                <p>If this review resonates with you and you want to explore the Fast Profit System further, click the button below.</p>
+                <a href="https://warriorplus.com/o2/a/m2ds25d/0" class="cta-button" rel="noopener noreferrer">Get Access Now</a>
+            </div>
+        </section>
+    </div>
+</main>
 
 <footer>
     <div class="container">
