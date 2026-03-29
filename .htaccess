@@ -1,14 +1,6 @@
-# Allow search engine bots
+# Enable mod_rewrite
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    
-    # Allow Bingbot and other search engines
-    RewriteCond %{HTTP_USER_AGENT} !Bingbot [NC]
-    RewriteCond %{HTTP_USER_AGENT} !Googlebot [NC]
-    RewriteCond %{HTTP_USER_AGENT} !Slurp [NC]
-    RewriteCond %{HTTP_USER_AGENT} !DuckDuckBot [NC]
-    RewriteCond %{HTTP_USER_AGENT} !Baiduspider [NC]
-    RewriteCond %{HTTP_USER_AGENT} !YandexBot [NC]
     
     # Redirect HTTP to HTTPS
     RewriteCond %{HTTPS} off
@@ -22,17 +14,6 @@
 # Enable GZIP compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
-</IfModule>
-
-# Cache control
-<IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresByType text/html "access plus 1 day"
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
-    ExpiresByType image/jpeg "access plus 1 month"
-    ExpiresByType image/png "access plus 1 month"
-    ExpiresByType image/gif "access plus 1 month"
 </IfModule>
 
 # Prevent directory listing
